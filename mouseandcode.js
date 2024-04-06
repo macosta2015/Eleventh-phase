@@ -121,7 +121,8 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         await clickButtonByIndex(newPage, desiredIndex3);
         //Right click option
         const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
-        const title3 = 'Sketch 1'; // Replace with the desired title
+        const title3 = Sketch 1'Sketch 1'; // Replace with the desired title
+        const title3 = ''; // Replace with the desired title
         const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
         console.log(editOptions4);
         //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
