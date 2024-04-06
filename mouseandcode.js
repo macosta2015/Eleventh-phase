@@ -22,10 +22,10 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const newPage = await launchBrowserAndNavigateToDocument(); // This line should return a newPage object
 
 
-        //NEW SKETCH
-        await performTest(newPage);
+        // NEW SKETCH
+        // await performTest(newPage);
 
-        //////
+
         // //ALL THE CODE TOGETHER
         // const desiredIndex = 5; // Or any other desired index
         // await clickButtonByIndex(newPage, desiredIndex);
@@ -80,7 +80,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         // pasteIntoSketchFunction(editOptions1, newPage);
         // await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
         // console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
-        //////
+        // ////
 
 
 
@@ -93,16 +93,19 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
         //EDIT
-        console.log('Waited for 5 seconds.');
+        console.log('START clickButtonByIndex');
         console.log('WE START THE 10TH PHASE');
-        await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5
-
+        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 5
         //ALL THE CODE TOGETHER
-        const desiredIndex3 = 7; // Or any other desired index
+        const desiredIndex3 = 8; // Or any other desired index
         await clickButtonByIndex(newPage, desiredIndex3);
         //Right click option
+        //EDIT
+        console.log('END clickButtonByIndex');
+        console.log('WE START THE 10TH PHASE');
+        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 5
         const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
-        const title3 = 'Sketch 1'; // Replace with the desired title
+        const title3 = 'Third Sketch'; // Replace with the desired title
         const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
         console.log(editOptions4);
         //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
@@ -112,22 +115,22 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-        //RENAME
-        console.log('Waited for 5 seconds.');
-        console.log('WE START THE RENAME PHASE');
-        await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5
-        //ALL THE CODE TOGETHERx
-        const desiredIndex3 = 7; // Or any other desired index
-        await clickButtonByIndex(newPage, desiredIndex3);
-        //Right click option 
-        const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
-        const title3 = 'Sketch 1'; // Replace with the desired title
-        const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
-        console.log(editOptions4);
-        //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
-        renameIntoSketchFunction(editOptions4, newPage);
-        await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
-        console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
+        // //RENAME
+        // console.log('Waited for 5 seconds.');
+        // console.log('WE START THE RENAME PHASE');
+        // await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5
+        // //ALL THE CODE TOGETHERx
+        // const desiredIndex3 = 7; // Or any other desired index
+        // await clickButtonByIndex(newPage, desiredIndex3);
+        // //Right click option 
+        // const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
+        // const title3 = 'Sketch 1'; // Replace with the desired title
+        // const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
+        // console.log(editOptions4);
+        // //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
+        // renameIntoSketchFunction(editOptions4, newPage);
+        // await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
+        // console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
 
 
 
