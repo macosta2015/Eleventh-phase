@@ -11,6 +11,8 @@ const copySketchFunction = require('./components/copySketchFunction.js');
 const pasteIntoSketchFunction = require('./components/pasteIntoSketchFunction.js');
 const editIntoSketchFunction = require('./components/editIntoSketchFunction.js');
 const renameIntoSketchFunction = require('./components/renameIntoSketchFunction.js');
+const waitForEnter = require('./components/waitForEnter.js');
+
 
 const { performRightClickOptionByTitle } = require('./components/performRightClickOptionByTitle.js');
 
@@ -40,16 +42,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-
-
-        //console.log('CODE TO HAVE CODE WAIT UNTIL USER INPUT')
-        console.log('CODE TO HAVE CODE WAIT UNTIL USER INPUT')
-        const readline = require('readline');
-        const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-        console.log('Please press the Enter key to continue...');
-        const enterPromise = new Promise(resolve => rl.once('line', resolve));
-        await enterPromise;
-        console.log('User pressed Enter to continue.');
+        await waitForEnter();
 
 
 
@@ -95,6 +88,34 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         await new Promise(resolve => setTimeout(resolve, 40000)); // Wait for 10 seconds
         console.log('Waited for 40 seconds.'); console.log('AFTER THE CODE RUNS.');
         ////
+
+
+
+
+
+
+        //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
+        console.log('Waiting 10 seconds.');
+        console.log('SELECTING ITEM 5 ON THE LIST.');
+        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
+        await newPage.evaluate(() => {
+            const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
+            thirdButton.click();
+            if (thirdButton) {
+                thirdButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+            } else {
+                console.error('Third button not found.');
+            }
+        });
+
+
+
+
+
+
+
+
+        await waitForEnter();
 
 
 
