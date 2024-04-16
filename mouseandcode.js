@@ -42,7 +42,9 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
+        ////////////////////
         await waitForEnter();
+        ////////////////////
 
 
 
@@ -115,7 +117,10 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
+        ////////////////////
         await waitForEnter();
+        ////////////////////
+
 
 
 
