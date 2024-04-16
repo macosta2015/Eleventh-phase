@@ -37,6 +37,7 @@ async function copySketchFunction(editOptions3, newPage) {
     }
     console.log('Waiting 10 seconds.');
     await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
+
 }
 
 module.exports = copySketchFunction;
