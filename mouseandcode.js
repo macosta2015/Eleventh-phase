@@ -215,7 +215,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         await newPage.keyboard.press('Enter');
         await newPage.mouse.move(290, 311);
         await newPage.mouse.down({ button: 'left' });
-        console.log('Mouse clicked and held at X:290, Y:311');
+        console.log('Mouse clicked and held at X:724, Y:297');
         await new Promise(resolve => setTimeout(resolve, 3000));
 
         const readline = require('readline');
