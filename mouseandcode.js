@@ -27,7 +27,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
         //ALL THE CODE TOGETHER
-        const desiredIndex = 6; // Or any other desired index
+        const desiredIndex = 5; // Or any other desired index
         await clickButtonByIndex(newPage, desiredIndex);
         //Right click option
         const selector = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
@@ -39,13 +39,28 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-        //SELECT SKETCH RIGHT CLICK OPTIONS TO UNCLICK
+
+
+
+        //console.log('CODE TO HAVE CODE WAIT UNTIL USER INPUT')
+        console.log('CODE TO HAVE CODE WAIT UNTIL USER INPUT')
+        const readline = require('readline');
+        const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+        console.log('Please press the Enter key to continue...');
+        const enterPromise = new Promise(resolve => rl.once('line', resolve));
+        await enterPromise;
+        console.log('User pressed Enter to continue.');
+
+
+
+
+
+        //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
         console.log('Waiting 10 seconds.');
         console.log('SELECTING ITEM 5 ON THE LIST.');
-
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
         await newPage.evaluate(() => {
-            const thirdButton = document.querySelectorAll('.os-list-item-name')[6];
+            const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
             thirdButton.click();
             if (thirdButton) {
                 thirdButton.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
@@ -56,12 +71,13 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
+
         // RIGHT CLICK 
         //ALL THE FOLLOWING CODE NEEDS TO GO TOGETHER
         console.log('Waiting 10 seconds.');
         console.log('SELECTING ITEM 5 ON THE LIST.');
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
-        const desiredIndex1 = 6; // Or any other desired index
+        const desiredIndex1 = 7; //IMPORTANT PART THAT MAKES THE CODE RUN!
         await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 10 seconds
         console.log('Waiting 5 seconds.');
         await clickButtonByIndex(newPage, desiredIndex1);
