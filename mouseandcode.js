@@ -102,9 +102,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-
-
-
         // /////////
         //         //EDIT
         //         console.log('START clickButtonByIndex');
